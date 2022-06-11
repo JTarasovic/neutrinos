@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # ratchet:actions/checkout@v3
       - name: Check workflows pinned
         id: ratchet_check
-        uses: neutrinos-os/action-ratchet-check-dir@a6d0f892d9232128e0cda69a14c4bbe94dbbafaa # ratchet:neutrinos-os/action-ratchet-check-dir@v0.2.3
+        uses: neutrinos-os/action-ratchet-check-dir@c5dcee71799457a1153afcf61cbff6c0ddcfe628 # ratchet:neutrinos-os/action-ratchet-check-dir@v0.2.3-1
       - name: Update status
         if: ${{ always() }}
-        uses: ouzi-dev/commit-status-updater@bb4eee278096c3d589a7f79c62bc66179c82d553 # ratchet:ouzi-dev/commit-status-updater@v1.1.0
+        uses: ouzi-dev/commit-status-updater@v1.1.0
         with:
           name: Action versions pinned
           status: "${{ steps.ratchet_check.outcome }}"
